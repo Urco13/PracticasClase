@@ -28,7 +28,13 @@ public class Atletas6 {
         tiempo = objetoTeclado.nextFloat();
         
         if(sex == 'H' && edad <=40 && tiempo <=1.5){
-            System.out.println("Seleccionado");
-        }else if(sex == 'H')
+            System.out.println("Estas seleccionado");
+        }else if(sex == 'H' && edad>40 && tiempo <=1.75){
+            System.out.println("Estas seleccionado");
+        }else if(sex == 'M' && tiempo <=1.8){
+            System.out.println("Estas selecionada");
+        }else{
+            System.out.println("No estas selecionado");
+        }
     }
 }
