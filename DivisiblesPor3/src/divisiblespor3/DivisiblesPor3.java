@@ -24,21 +24,27 @@ public class DivisiblesPor3 {
     public static void main(String[] args) throws IOException {
         // Definimos variables
         int numeroA, numeroB, mayor, menor, i;
-        /**Definimos el ojeto teclado con el clase BufferedReader metiendo en su argugmento
-         * La creacion de otro objeto
-        */
+        /*Definimos el ojeto teclado con el clase BufferedReader metiendo en su argugmento
+          La creacion de otro objeto InputStreamReader*/
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+        //pedimos el primer numero
         System.out.println("Dame el primer nuemero");
+        /**lo guardamos en la variable numeroA usando la Clase Integer con el metodo parseInt
+         * y pasandole como argumento el objeto teclado con el metodo readline
+         */
         numeroA = Integer.parseInt(teclado.readLine());
+        //pedimos el segundo numero
         System.out.println("Dame el segundo numero");
+        //lo guardamos en la variable numeroB
         numeroB = Integer.parseInt(teclado.readLine());
+        //usamos la clase Math con sus metodos max min para ver el mayor y menor de los dos numeros
         mayor = Math.max(numeroA, numeroB);
         menor = Math.min(numeroA, numeroB);
+        System.out.println("Numero menor "+ menor +" numero mayor" + mayor);
         for(i=menor; i<=mayor; i++){
             if(i%3==0)
-                System.out.println("");
-            
-    }
+                System.out.println("Numero divisible por 3 " + i); 
+        }
         
     }
     
