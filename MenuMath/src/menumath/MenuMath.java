@@ -23,12 +23,12 @@ public class MenuMath {
 
     
     public static void main(String[] args) throws IOException {
-        String cadena; int opcion; float numero, exp;
+        String cadena; int opcion; float numero, numero2, exp;
         BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));//creamos el objeto teclado con la Clase BufferedRedader
         do{
             System.out.println("Dame un numero");
             cadena = teclado.readLine();//leemos la entrada del teclado con el meto readLine del ojeto teclado
-            numero = Integer.parseInt(cadena);//transformamos la cadena aun entero
+            numero = Float.parseFloat(cadena);//transformamos la cadena aun entero
             System.out.println("Pulse 1 para hallar su valor absoluto");//Pedimos que eliga entre una opcion
             System.out.println("Pulse 2 para calcular su raiz cuadrada");
             System.out.println("Pulse 3 para devolver el numero entero");
@@ -46,21 +46,29 @@ public class MenuMath {
                         System.out.println("La raiz cuadrada " + Math.sqrt(numero));
                         break;
                         case(3):
-                            System.out.println("El numero entero es" + Math.floor(numero) );//si no se va a guardar el valor no hace falta cambiar a (int)
+                            System.out.println("El numero entero es " + (int)Math.floor(numero) );//si no se va a guardar el valor no hace falta cambiar a (int)
                             break;
                             case(4):
                                 System.out.println("Redondeado hacia arriba " + Math.ceil(numero));
                                 break;
                                 case(5):
                                     System.out.println("Dame el exponente");
-                                    
-                                    System.out.println("");
-            }
-        while(opcion!=7)
-    }
-
-    
-    
+                                        cadena = teclado.readLine();
+                                        exp = Integer.parseInt(cadena);
+                                        System.out.println("La pontencia de " + numero + " es " + Math.pow(numero, exp) );
+                                        break;
+                                        case(6):
+                                            System.out.println("Dame otro numero"); 
+                                            cadena = teclado.readLine();
+                                            numero2 = Integer.parseInt(cadena);
+                                            System.out.println("El mayor de los dos numeros es " + Math.max(numero, numero2));
+                                            case(7):
+                                                System.out.println("Hasta pronto");
+                                                
+                                }   
+        }while(opcion!=7);
+       
+       }
 }
 /**
  * case '3'
