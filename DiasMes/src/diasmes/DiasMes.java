@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Crear un programa en Java que lea 2 datos año y mes
+ * y nos muestre los dias correspondientes al mes.
+ * Nota: 1 año es bisiesto si es multiplo de 4 y no de 100 o
+ * cuando es multiplo de 400
+ * año=1900
  */
 package diasmes;
 
@@ -9,13 +11,45 @@ package diasmes;
  *
  * @author dam115
  */
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 public class DiasMes {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Definimos variables
+        int ano, mes; String cadena; 
+        //Definimos el objeto teclado.
+        BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Dime el año");
+        cadena = teclado.readLine();
+        ano = Integer.parseInt(cadena);
+        System.out.println("Dime el mes");
+        cadena = teclado.readLine();
+        mes = Integer.parseInt(cadena);
+        switch(mes){
+            case(1):
+            case(3):
+            case(5):
+            case(7):
+            case(8):
+            case(10):
+            case(12):
+                System.out.println("Este mes tiene 31 dias");
+                break;
+            case(4):
+            case(6):
+            case(9):
+            case(11):
+                System.out.println("Este mes tiene 30 dias");
+                break;
+            case(2)://mes de febrero
+                if(ano%4==0 && () )
+                
+        }
     }
     
 }
+/**
+ * System.out.println("Dame mes:")
+ * m= teclado.readline
+ */
