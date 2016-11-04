@@ -62,6 +62,7 @@ public class MenuMath {
                                             cadena = teclado.readLine();
                                             numero2 = Integer.parseInt(cadena);
                                             System.out.println("El mayor de los dos numeros es " + Math.max(numero, numero2));
+                                            break;
                                             case(7):
                                                 System.out.println("Hasta pronto");
                                                 
