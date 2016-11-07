@@ -25,6 +25,7 @@ public class ModuloPintaCuadrado {
          area = pintaCuadrado(lado);
         System.out.println("El area del cuadrado es " + area);
     }
+    //Aqui empieza el metodo que pinta el cuadrado y que devuelve el area
     public static int pintaCuadrado(int lado){
         int i, area;
         for(i=1; i<=lado; i++ ){
@@ -33,8 +34,9 @@ public class ModuloPintaCuadrado {
            }  
             System.out.println("");
         }
-        area = lado *=lado;
-        return area;
+        lado *=lado;//Se hace la operacion
+        area = lado;
+        return area;//Devuelve el valor
     }
     
 }
