@@ -22,11 +22,35 @@ public class AdivinarNumero3 {
        menuPrincipal();
        int rangoUno = primerNumero();
        int rangoDos = segundoNumero();
-       int numeroIntentos = numeroIntentos(); 
+       int numeroIntentos = numeroIntentos();
+       jugarAdivina(rangoUno, rangoDos, numeroIntentos);
     }//Fin main
     
      //Metodo Jugar
-        
+        public static int jugarAdivina(int numero, int numeroDos, int numeroIntentos){
+        int numeroAle = numeroAleatorio();
+            for(numeroIntentos; i<=rango2; numeroIntentos++){
+                int resultado =leerTecladoInt("Este es tu " + i + " introduce el numero");
+                if(resultado == numeroAle){
+                    System.out.println("Eres un fenomeno acertastes en tu " + i + " intento");
+                    return;
+                }else if(resultado > numeroAle){
+                    if(Math.abs(resultado - numeroAle) < 10){
+                        System.out.println("Te has pasado pero estas muy cerca");
+                    }else if(Math.abs(resultado - numeroAle) < 30){
+                        System.out.println("Te has pasado pero estas cerca");
+                    }else 
+                          System.out.println("Te has pasado estas muy lejos");
+                }else if(resultado < numeroAle){
+                    if(Math.abs(resultado - numeroAle) < 10){
+                        System.out.println("Te has quedado corto pero estas muy cerca");
+                    }else if(Math.abs(resultado - numeroAle) < 30){
+                        System.out.println("Te has quedado corto pero estas cerca");
+                    }else 
+                          System.out.println("Te has que dado corto estas muy lejos");
+                }
+            }
+        }
     
      //Metodo menu principal
     public static void menuPrincipal() throws IOException{
