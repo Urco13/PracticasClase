@@ -4,25 +4,35 @@
  * and open the template in the editor.
  */
 package adivinarnumero3;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
 /**
- * @author urco1
+ *
+ * @author dam115
  */
 public class AdivinarNumero3 {
-    
+
     static BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+    static final int MUYCERCA = 10;
+    static final int CERCA = 30;
     
+    /**Aqui comienza el programa de adivinar numeros
+    *el usuario nos tiene que proporcionar el rango entre el cual
+    *se encuentra el numero a adivinar y proporcionarnos el numero de 
+    *intentos que tenemos para adivinarlo
+     * @throws java.io.IOException
+    */
     public static void main(String[] args) throws IOException {
-         menuPrincipal();
+        menuPrincipal();
        int rangoUno = primerNumero();
        int rangoDos = segundoNumero();
        int numeroIntentos = numeroIntentos();
        jugarAdivina(rangoUno, rangoDos, numeroIntentos);
-    }//fin main
+    }//Fin main
     
      /**Metodo Jugar
       * 
@@ -42,16 +52,16 @@ public class AdivinarNumero3 {
                     System.out.println("Eres un fenomeno acertastes en tu " + i + " intento");
                      return;
                 }else if(resultado > numeroAle){
-                    if(Math.abs(resultado - numeroAle) < 10){
+                    if(Math.abs(resultado - numeroAle) < MUYCERCA){
                         System.out.println("Te has pasado pero estas muy cerca");
-                    }else if(Math.abs(resultado - numeroAle) < 30){
+                    }else if(Math.abs(resultado - numeroAle) < CERCA){
                         System.out.println("Te has pasado pero estas cerca");
                     }else 
                           System.out.println("Te has pasado estas muy lejos");
                 }else if(resultado < numeroAle){
-                    if(Math.abs(resultado - numeroAle) < 10){
+                    if(Math.abs(resultado - numeroAle) < MUYCERCA){
                         System.out.println("Te has quedado corto pero estas muy cerca");
-                    }else if(Math.abs(resultado - numeroAle) < 30){
+                    }else if(Math.abs(resultado - numeroAle) < CERCA){
                         System.out.println("Te has quedado corto pero estas cerca");
                     }else 
                           System.out.println("Te has que dado corto estas muy lejos");
@@ -101,22 +111,9 @@ public class AdivinarNumero3 {
         return numeroMenu;
     }
     
-    /**Leer string devolver string
-     * 
-     * @param texto
-     * @return
-     * @throws IOException 
-     */
-    public static String leerTecladoString(String texto) throws IOException{
-        
-        System.out.println(texto);
-        String numeroTeclado = teclado.readLine();
-        return numeroTeclado;
-    }
-    
     /**Leer string devolver int
      * 
-     * @param texto
+     * @param texto mensajea mostrar
      * @return
      * @throws IOException 
      */
@@ -138,4 +135,4 @@ public class AdivinarNumero3 {
         int numeroAleatorio = r.nextInt((numero2-(numero1-1)))+numero1;
         return numeroAleatorio;
     }
-}//fin class
+}//Fin Class
