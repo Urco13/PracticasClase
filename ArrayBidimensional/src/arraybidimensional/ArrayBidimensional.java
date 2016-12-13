@@ -6,6 +6,7 @@ mostrar los datos de la fila 3,
 mostrar suma de cada fila,
 mostrar suma columna 3,
 Donde esta el numero?
+Recorrer por columnas y mostrar
 */
 package arraybidimensional;
 
@@ -28,20 +29,32 @@ public class ArrayBidimensional {
     public static final int COLUMNAS = 4;
     //comienzo main
     public static void main(String[] args) {
-      guardarNumerosArray();
+      int miMatriz[][];
+      miMatriz=guardarNumerosArray();
+      
     }//fin main
     
+    
+    //Metodo mostrar tabla
+    public static void mostrarTabla(int matriz[][]){
+        for (int i = 0; i <matriz.length; i++) {
+            for (int j = 0; j <matriz[i].length; j++) {
+                System.out.println("Fila "+i+" numero "+matriz[i][j]);
+            }
+        }
+        
+    }//fin metodo
+    
     //Metodo guardar numero array
-    public static void guardarNumerosArray(){
+    public static int[][] guardarNumerosArray(){
         int matriz[][] = new int[FILAS][COLUMNAS];
         for (int i = 0; i<matriz.length; i++) {
             for (int j = 0; j <matriz[i].length; j++) {
-                matriz[i][j]=leerStringI("Dime un numero");
-                System.out.println(matriz[i][j]);       
+                matriz[i][j]=leerStringI("Dime un numero");   
             }
         }
        
-    }
+    }//fin metodo
     
     
     //METODO LEER
@@ -59,7 +72,7 @@ public class ArrayBidimensional {
 //          int tabla[][]=new int[FILA][COLUM];
 //          System.out.println("numero filas "+tabla.length);
 //          System.out.println("elementos fila 0 ==> "+tabla[0].length);
-    }
+    }//fin metodo
   
 }//fin class
 
