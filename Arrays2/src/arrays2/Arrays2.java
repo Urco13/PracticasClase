@@ -31,11 +31,14 @@ public class Arrays2 {
         System.out.println("Este es binarySearch");
             //Siempre hay que ordenar el array antes de usar binarysearch
          int posicion= Arrays.binarySearch(matriz,"Maria");
+         //if(position>=0)
+         //{sout +(position+1)}
          //if (Arrays.binarySearch
          System.out.println(posicion);
          
         System.out.println("Este es fill");
-        Arrays.fil
+        Arrays.fill(matriz,"Carlos");
+        System.out.println(matriz);
          
     }//fin main
   
