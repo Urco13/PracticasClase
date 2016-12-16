@@ -1,7 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Leer y almacenar 15 numeros
+ * - Mostrarlos en orden inverso
+ * - Permitir hacer una consulta si existe un nº determinado
+ * - Buscar y mostrar el mayor
+ *
+ * a) Crear los metodos
+ * - Mostrar datos
+ * - Invertir los valores en la tabla con tabla auxiliar o no
  */
 package array3;
 
